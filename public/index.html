@@ -4,26 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Список пользователей</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <h2>Список пользователей</h2>
     <form name="userForm">
         <input type="hidden" name="id" value="0" />
-        <div class="form-group">
+        <div>
             <label for="name">Имя:</label>
-            <input class="form-control" name="name" />
+            <input name="name" />
         </div>
-        <div class="form-group">
+        <div >
             <label for="age">Возраст:</label>
-            <input class="form-control" name="age" />
+            <input name="age" />
         </div>
-        <div class="panel-body">
-            <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
-            <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
+        <div>
+            <button type="submit">Сохранить</button>
         </div>
     </form>
-    <table class="table table-condensed table-striped table-bordered">
+    <table cellpadding="15px">
         <thead><tr><th>Id</th><th>Имя</th><th>возраст</th><th></th></tr></thead>
         <tbody>
         </tbody>
@@ -160,12 +158,6 @@
   
             return tr;
         }
-        // сброс значений формы
-        document.getElementById("reset").click(function (e) {
-  
-            e.preventDefault();
-            reset();
-        })
   
         // отправка формы
         document.forms["userForm"].addEventListener("submit", e => {
